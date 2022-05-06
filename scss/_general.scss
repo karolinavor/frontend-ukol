@@ -2,6 +2,7 @@
 
 $purple: #4E325C;
 $white: #fff;
+$grey: #4E325C1A;
 $green: #548B35;
 
 /* Breakpoints */
@@ -22,6 +23,16 @@ body {
 
 a {
     color: inherit;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+button {
+    background: none;
+    border: none;
 }
 
 img {
@@ -31,11 +42,29 @@ img {
 
 ul {
     padding: 0;
+    margin: 0;
     list-style: none;
 }
 
-h1 {
+h1, h2 {
     margin-top: 0;
+}
+
+h1 {
+    font-size: 1.75rem;
+
+    @media (min-width: $lg) {
+        font-size: 2.75rem;
+    }
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: $purple;
+
+    @media (min-width: $lg) {
+        font-size: 2.5rem;
+    }
 }
 
 /* Classes */
@@ -67,4 +96,56 @@ h1 {
 
 .text-center {
     text-align: center;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+/* Buttons */
+
+.button-transparent,
+.button-green,
+.button-white {
+    display: inline-block;
+    padding: .5rem 1.5rem;
+ 
+    border-radius: 2rem;
+    font-weight: 700;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.button-transparent,
+.button-green {
+    color: $white;
+}
+
+.button-green,
+.button-white {
+    &:hover {
+        color: $white;
+        background-color: $purple;
+    }
+}
+
+.button-transparent {
+    background-color: transparent;
+    border: 2px solid $white;
+
+    &:hover {
+        color: $purple;
+        background-color: $white;
+    }
+}
+
+.button-green {
+    background-color: $green;
+}
+
+.button-white {
+    color: $purple;
+    background-color: $white;
 }

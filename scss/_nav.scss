@@ -12,5 +12,19 @@ nav {
     .container {
         padding-top: 0;
         padding-bottom: 0;
+
+        .nav-mobile-menu {
+            @media (min-width: $lg) {
+                display: none;
+            }
+        }
+
+        .nav-menu, .mav-button {
+            display: none;
+
+            @media (min-width: $lg) {
+                display: flex;
+            }
+        }
     }
 }

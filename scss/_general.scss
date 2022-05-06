@@ -1,7 +1,70 @@
+/* Colors */
+
+$purple: #4E325C;
+$white: #fff;
+$green: #548B35;
+
+/* Breakpoints */
+
+$md: 768px;
+$lg: 992px;
+
+/* General */
+
 html {
     font-size: 16px;
 }
 
 body {
-    color: red;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+/* Classes */
+
+.container {
+    max-width: 1720px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.grid {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
 }

@@ -1,0 +1,13 @@
+footer {
+    background-color: $purple;
+    color: $white;
+
+    .footer-row {
+        display: flex;
+        justify-content: space-between;
+
+        &:first-of-type {
+            margin-bottom: 2rem;
+        }
+    }
+}

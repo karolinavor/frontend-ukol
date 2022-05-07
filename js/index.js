@@ -34,5 +34,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
             }
           }
     });
-
+  
+  let toggleMobileMenu = () => {
+    let nav = document.querySelector('nav');
+    let body = document.querySelector('body');
+    body.classList.toggle('overflow-hidden');
+    nav.classList.toggle('mobile');
+  }
+  
+  document.querySelector(".nav-mobile-button").addEventListener("click", toggleMobileMenu);
+  document.querySelector(".mobile-menu-close").addEventListener("click", toggleMobileMenu);
 });

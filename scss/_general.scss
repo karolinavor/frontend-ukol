@@ -1,20 +1,25 @@
 /* Colors */
 
 $purple: #4E325C;
+$light_purple: #6D308D;
 $white: #fff;
 $grey: #4E325C1A;
 $green: #548B35;
 
 /* Breakpoints */
 
+$sm: 640px;
 $md: 768px;
 $lg: 992px;
+$xl: 1720px;
 
 /* General */
 
 html {
     font-size: 16px;
     font-family: 'Fedra Sans Pro', sans-serif;
+    font-weight: 400;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -67,11 +72,16 @@ h1 {
 
 h2 {
     font-size: 1.5rem;
-    color: $purple;
+    color: $light_purple;
 
     @media (min-width: $lg) {
         font-size: 2.5rem;
     }
+}
+
+section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 /* Classes */
@@ -111,10 +121,6 @@ h2 {
 
 .overflow-hidden {
     overflow: hidden;
-}
-
-.hidden {
-    display: none;
 }
 
 /* Buttons */

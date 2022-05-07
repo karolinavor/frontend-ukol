@@ -29,10 +29,18 @@
 
                 transform-origin: 0 0;
 
-                width: 0.4rem;
-                height: 0.4rem;
-                border-right: 0.2rem solid white;
-                border-top: 0.2rem solid white;
+                width: 0.4em;
+                height: 0.4em;
+                border-right: 0.2em solid white;
+                border-top: 0.2em solid white;
+            }
+
+            transition: all .2s;
+
+            &:hover {
+                font-size: 18px;
+                width: 2.75rem;
+                height: 2.75rem;
             }
         }
     
@@ -71,18 +79,41 @@
         }
     }
 
-    .grid-text {
+    .info-grid-text {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         align-items: flex-start;
 
-        padding: 2rem;
-
         background-color: $grey;
+
+        .info-grid-text-first,
+        .info-grid-text-second {
+            padding: 1.5rem;
+
+            @media (min-width: $xl) {
+                max-width: 49.75rem;
+            }
+        }
+
+        .info-grid-text-first {
+            margin-left: auto;
+
+            @media (min-width: $xl) {
+                padding-right: 4rem;
+            }
+        }
+        
+        .info-grid-text-second {
+            margin-right: auto;
+
+            @media (min-width: $xl) {
+                padding-left: 4rem;
+            }
+        }
     }
 
-    .grid-photo {
+    .info-grid-photo {
         img {
             width: 100%;
             height: 100%;
@@ -95,8 +126,80 @@
 .apartments-grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    grid-gap: .1rem;
 
-    @media (min-width: $lg) {
+    @media (min-width: $sm) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: $md) {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .apartments-grid-item {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+
+        &:first-of-type {
+            @media (min-width: $sm) {
+                grid-column: span 2;
+            }
+
+            @media (min-width: $md) {
+                grid-column: span 1;
+            }
+        }
+
+        color: $white;
+
+        .apartments-grid-bg {
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .purple-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $purple;
+            opacity: 0.5;
+        }
+
+        .apartments-grid-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            max-width: 100%;
+            max-height: 100%;
+            z-index: 1;
+
+            padding: 1rem 1.5rem;
+
+            p {
+                font-weight: 300;
+                font-size: .9rem;
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+
+            .purple-overlay {
+                background: $light_purple;
+                opacity: 0.9;
+            }
+
+            .button-transparent {
+                color: $purple;
+                background-color: $white;
+            }
+        }
     }
 }

@@ -54,6 +54,8 @@ header {
         justify-content: space-between;
         align-items: flex-start;
 
+        padding-bottom: 6rem;
+
         color: $white;
 
         .header-content {
@@ -62,6 +64,28 @@ header {
             @media (min-width: $lg) {
                 width: 45%;
             }
+        }
+    }
+
+    .header-chevron-down {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 1rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3.5rem;
+        height: 3.5rem;
+
+        background-color: $light_purple;
+        border-radius: 50%;
+
+        transition: margin .3s;
+
+        &:hover {
+            margin-bottom: -.5rem;
         }
     }
 }

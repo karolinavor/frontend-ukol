@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
     const swiper = new Swiper('.swiper-gallery', {
         autoplay: true,
-        loop: true,
         speed: 500,
         delay: 3000,
         slidesPerView: 1,
@@ -43,5 +42,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
   
   document.querySelector(".nav-mobile-button").addEventListener("click", toggleMobileMenu);
-  document.querySelector(".mobile-menu-close").addEventListener("click", toggleMobileMenu);
 });

@@ -1,4 +1,4 @@
-# pux-ukol
+# frontend-ukol
 
 ### Build scss
 
